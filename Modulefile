@@ -9,5 +9,5 @@ project_page 'https://github.com/jbeard6/jbeard-nfs'
 
 ## Add dependencies, if any:
 dependency 'jbeard/portmap',    '>= 0.1.0'
-dependency 'puppetlabs/concat', '>= 1.1.0'
+dependency 'puppetlabs/concat', '>= 1.0.0'
 dependency 'puppetlabs/stdlib', '>= 4.0.0'

@@ -37,13 +37,13 @@ class nfs::client (
     case $::operatingsystem {
         centos, redhat : {
             class { 'nfs::client::rhel':
-                ensure = $ensure,
+                ensure => $ensure,
             }
         }
 
         debian : {
             class { 'nfs::client::debian':
-                ensure = $ensure,
+                ensure => $ensure,
             }
         }
 

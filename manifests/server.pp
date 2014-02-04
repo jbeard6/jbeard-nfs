@@ -41,6 +41,7 @@ class nfs::server (
 ) {
 
     require stdlib
+    require concat
 
     # TODO Refactor common packages, etc. out so that a server need not be a client as well.
     require nfs::client

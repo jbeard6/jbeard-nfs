@@ -6,7 +6,7 @@ define nfs::export (
 
     concat::fragment { $name:
         target  => '/etc/exports',
-        content => "${path} ${clients}(${options.join(',')})",
+        content => template('nfs/exports.fragment.erb'),
     }
 
 }

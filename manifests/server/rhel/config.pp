@@ -18,7 +18,7 @@ class nfs::server::rhel::config (
 
         concat::fragment { '/etc/exports#header':
             target  => '/etc/exports',
-            content => '# This file is configured through the nfs::server puppet module.\n',
+            content => "# This file is configured through the nfs::server puppet module.\n",
             order   => 01,
         }
 

@@ -11,11 +11,6 @@ class nfs::server::rhel::config (
     } else {
 
         concat { '/etc/exports':
-            ensure => $ensure ? {
-                absent  => absent,
-                default => present,
-            },
-
             owner  => 'root',
             group  => 'root',
             mode   => '0644',

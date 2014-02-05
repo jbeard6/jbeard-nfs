@@ -29,16 +29,49 @@ It also controls execution of the appropriate daemon services.
 This module requires the [puppetlabs/stdlib][stdlib] module and the [jbeard/portmap][portmap] modules.
 
 ###Beginning with nfs
-_TODO_ Explain basic usage of this module
+The nfs module is broken into two main components: `nfs::client` for those hosts that only wish to
+consume NFS exports from another server, and `nfs::server` for those hosts that wish also to export
+filesystems via NFS.  Importing the `nfs` class directly will have no affect.  At this time, inclusion
+of the `nfs::server` class automatically includes the `nfs::client` class as well.
+
+Furthermore, for hosts that import the `nfs::server` class, the `nfs::export` type becomes available.
+This type exposes the `/etc/exports` file with a puppet-like interface.
 
 ##Usage
-_TODO_ Explain complete usage of this module
+
+###NFS Client
+To enable a host to act as an NFS client, simply include the `nfs::client` class in the manifest.
+
+    include nfs::client
+
+The resource may optionally be specified as
+
+    class { 'nfs::client':
+        ensure => installed,
+    }
+
+###NFS Server
+To enable a host to act as an NFS server, include the `nfs::server` class in the manifest and,
+optionally, some `nfs::export` resources.
+
+    class { 'nfs::server':
+        package => latest,
+        service => running,
+        enable  => true,
+    }
+    
+    nfs::export { '/srv/shared':
+        options => [ 'rw', 'async' ],
+        clients => [ "${::network_eth0}/${netmask_eth0}" ],
+    }
 
 ##Reference
 _TODO_ List all the classes and organization
 
 ##Limitations
 The nfs module is currently only supported on RedHat Enterprise Linux 5/6, CentOS 5/6, and Debian.
+
+Furthermore, use of the `nfs::server` class dictates that all exports be defined with the `nfs::export` resource type.
 
 ##Development
 _TODO_ Document development practices

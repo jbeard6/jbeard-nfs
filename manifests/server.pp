@@ -28,7 +28,7 @@
 #
 # === Authors
 #
-# Joseph Beard <joseph.beard@leadingedje.com>
+# Joseph Beard <joseph@josephbeard.net>
 #
 # === Copyright
 #

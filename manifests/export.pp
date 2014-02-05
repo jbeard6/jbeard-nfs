@@ -4,8 +4,6 @@ define nfs::export (
     $clients,
 ) {
 
-    require concat
-
     concat::fragment { $name:
         target  => '/etc/exports',
         content => "${path} ${clients}(${options.join(',')})",

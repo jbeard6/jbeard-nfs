@@ -41,7 +41,7 @@ class nfs::client (
             }
         }
 
-        debian : {
+        debian, ubuntu : {
             class { 'nfs::client::debian':
                 ensure => $ensure,
             }

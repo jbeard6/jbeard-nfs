@@ -56,13 +56,13 @@ class nfs::server (
             }
         }
 
-#        debian : {
-#            class { 'nfs::server::debian':
-#                package => $package,
-#                service => $service,
-#                enable  => $enable,
-#            }
-#        }
+        ubuntu : {
+            class { 'nfs::server::ubuntu':
+                package => $package,
+                service => $service,
+                enable  => $enable,
+            }
+        }
 
         default : {
             fail("nfs::server is not currently supported on ${::operatingsystem}")

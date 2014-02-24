@@ -1,5 +1,5 @@
 name    'jbeard-nfs'
-version '0.1.1'
+version '0.1.2'
 source 'https://github.com/jbeard6/jbeard-nfs'
 author 'jbeard'
 license 'Apache License, Version 2.0'
@@ -8,6 +8,6 @@ description 'This module installs an NFS client and server and configures the ex
 project_page 'https://github.com/jbeard6/jbeard-nfs'
 
 ## Add dependencies, if any:
-dependency 'jbeard/portmap',    '>= 0.1.0'
+dependency 'jbeard/portmap',    '>= 0.1.2'
 dependency 'puppetlabs/concat', '>= 1.0.0'
 dependency 'puppetlabs/stdlib', '>= 4.0.0'

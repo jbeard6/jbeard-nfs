@@ -69,7 +69,8 @@ optionally, some `nfs::export` resources.
 _TODO_ List all the classes and organization
 
 ##Limitations
-The nfs module is currently only supported on RedHat Enterprise Linux 5/6, CentOS 5/6, and Debian (Client only).
+The nfs module is currently only supported on RedHat Enterprise Linux 5/6, CentOS 5/6, Ubuntu 12.04 LTS, and
+Debian (Client only).
 
 Furthermore, use of the `nfs::server` class dictates that all exports be defined with the `nfs::export` resource type.
 

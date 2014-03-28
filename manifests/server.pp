@@ -56,7 +56,7 @@ class nfs::server (
             }
         }
 
-        ubuntu : {
+        ubuntu, debian : {
             class { 'nfs::server::ubuntu':
                 package => $package,
                 service => $service,

@@ -47,8 +47,8 @@ class nfs::server (
 
     anchor { 'nfs::server::begin': }
 
-    case $::operatingsystem {
-        centos, redhat : {
+    case $::osfamily {
+        RedHat : {
             class { 'nfs::server::rhel':
                 package => $package,
                 service => $service,
@@ -56,7 +56,7 @@ class nfs::server (
             }
         }
 
-        ubuntu, debian : {
+        Debian : {
             class { 'nfs::server::ubuntu':
                 package => $package,
                 service => $service,

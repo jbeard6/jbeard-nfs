@@ -34,14 +34,14 @@ class nfs::client (
 
     anchor { 'nfs::client::begin': }
 
-    case $::operatingsystem {
-        centos, redhat : {
+    case $::osfamily {
+        RedHat : {
             class { 'nfs::client::rhel':
                 ensure => $ensure,
             }
         }
 
-        debian, ubuntu : {
+        Debian : {
             class { 'nfs::client::debian':
                 ensure => $ensure,
             }

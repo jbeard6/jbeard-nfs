@@ -4,3 +4,4 @@ Licensed under Apache v2 license. The license text is included in LICENSE.txt.
 Thanks for contributions from:
   * Michael Speth
   * Tom Purl
+  * Daniel Silverman

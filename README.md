@@ -65,6 +65,29 @@ optionally, some `nfs::export` resources.
         clients => [ "${::network_eth0}/${netmask_eth0}" ],
     }
 
+### NFS Exports
+If you want to use hiera to define all your exports in one place. If you place these elements in one of your yaml files parsed
+
+    ---
+    nfs::exports::definitions:
+      :export_hiera_1:
+        :path:        '/tmp/export_hiera_1'
+        :options:     ['rw', 'async' ]
+        :clients:     [ 192.168.1.77 ]
+      :export_hiera_chroot: 
+        :path:        /tmp/export_hiera_chroot
+        :options:     ['ro', 'async', 'no_subtree_check', 'no_root_squash' ]
+        :clients:     [ 192.168.1.0/24 ]
+
+if will produce the following /etc/exports
+
+    # This file is configured through the nfs::server puppet module.
+    /tmp/export_hiera_1 192.168.1.77(rw,async)
+
+    /tmp/export_hiera_chroot 192.168.1.0/24(ro,async,no_subtree_check,no_root_squash)
+
+Or as shown in the file `tests/exports.pp` you may enter a hash directly into your puppet file
+
 ##Reference
 _TODO_ List all the classes and organization
 

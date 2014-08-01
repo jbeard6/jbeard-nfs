@@ -1,5 +1,5 @@
 name    'jbeard-nfs'
-version '0.1.6'
+version '0.1.7'
 source 'https://github.com/jbeard6/jbeard-nfs'
 author 'jbeard'
 license 'Apache License, Version 2.0'

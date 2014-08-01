@@ -5,3 +5,4 @@ Thanks for contributions from:
   * Michael Speth
   * Tom Purl
   * Daniel Silverman
+  * Niklaus Giger

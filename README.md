@@ -65,6 +65,13 @@ optionally, some `nfs::export` resources.
         clients => [ "${::network_eth0}/${netmask_eth0}" ],
     }
 
+
+You also have the options of manageing only the /etc/exports config file by enabling configonly => true
+
+    class { 'nfs::server':
+      configonly => true
+    }
+
 ### NFS Exports
 If you want to use hiera to define all your exports in one place. If you place these elements in one of your yaml files parsed
 

@@ -35,13 +35,13 @@ class nfs::client (
     anchor { 'nfs::client::begin': }
 
     case $::osfamily {
-        RedHat : {
+        'RedHat': {
             class { 'nfs::client::rhel':
                 ensure => $ensure,
             }
         }
 
-        Debian : {
+        'Debian': {
             class { 'nfs::client::debian':
                 ensure => $ensure,
             }

@@ -6,3 +6,4 @@ Thanks for contributions from:
   * Tom Purl
   * Daniel Silverman
   * Niklaus Giger
+  * treyormsbee (https://github.com/treyormsbee)

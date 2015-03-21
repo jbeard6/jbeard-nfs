@@ -35,9 +35,10 @@
 # Copyright 2014 Joseph Beard
 #
 class nfs::server (
-    $package = installed,
-    $service = running,
-    $enable  = true,
+    $package     = installed,
+    $service     = running,
+    $enable      = true,
+    $configonly  = false,
 ) {
 
     require stdlib
@@ -50,17 +51,19 @@ class nfs::server (
     case $::osfamily {
         'RedHat': {
             class { 'nfs::server::rhel':
-                package => $package,
-                service => $service,
-                enable  => $enable,
+                package    => $package,
+                service    => $service,
+                enable     => $enable,
+                configonly => $configonly,
             }
         }
 
         'Debian': {
             class { 'nfs::server::ubuntu':
-                package => $package,
-                service => $service,
-                enable  => $enable,
+                package    => $package,
+                service    => $service,
+                enable     => $enable,
+                configonly => $configonly,
             }
         }
 

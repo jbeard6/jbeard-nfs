@@ -4,6 +4,10 @@ define one_export(
   $clients = [],
 ) {
 
+  if (!defined(File["$path"])) {
+    file{"$path": ensure => present}
+  }
+
   nfs::export { $path:
       options => $options,
       clients => $clients,

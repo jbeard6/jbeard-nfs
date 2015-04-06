@@ -1,0 +1,16 @@
+{
+  "name": "jbeard-nfs",
+  "version": "0.1.9",
+  "author": "jbeard",
+  "summary": "NFS Client and Server",
+  "license": "Apache License, Version 2.0",
+  "source": "https://github.com/jbeard6/jbeard-nfs",
+  "project_page": "https://github.com/jbeard6/jbeard-nfs",
+  "issues_url": "https://github.com/jbeard6/jbeard-nfs/issues",
+  "description": "This module installs an NFS client and server and configures the exports.",
+  "dependencies": [
+    {"name":"jbeard/portmap","version_requirement":">= 0.1.6"},
+    {"name":"puppetlabs/concat","version_requirement":">= 1.0.0"},
+    {"name":"puppetlabs/stdlib","version_requirement":">= 4.0.0"}
+  ]
+}

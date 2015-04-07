@@ -5,9 +5,4 @@ class nfs::client::rhel::packages (
     package { 'nfs-utils':
         ensure => $ensure,
     }
-
-    package { 'nfs-utils-lib':
-        ensure => $ensure,
-    }
-
 }

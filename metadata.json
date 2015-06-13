@@ -9,7 +9,7 @@
   "issues_url": "https://github.com/jbeard6/jbeard-nfs/issues",
   "description": "This module installs an NFS client and server and configures the exports.",
   "dependencies": [
-    {"name":"jbeard/portmap","version_requirement":">= 0.1.6"},
+    {"name":"jbeard/portmap","version_requirement":">= 0.1.6 <2.0.0"},
     {"name":"puppetlabs/concat","version_requirement":">= 1.0.0"},
     {"name":"puppetlabs/stdlib","version_requirement":">= 4.0.0"}
   ]

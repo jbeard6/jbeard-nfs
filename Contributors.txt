@@ -7,3 +7,4 @@ Thanks for contributions from:
   * Daniel Silverman
   * Niklaus Giger
   * treyormsbee (https://github.com/treyormsbee)
+  * Matt Hyclak (https://github.com/hyclak)

@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "author": "jbeard",
   "summary": "NFS Client and Server",
-  "license": "Apache License, Version 2.0",
+  "license": "Apache-2.0",
   "source": "https://github.com/jbeard6/jbeard-nfs",
   "project_page": "https://github.com/jbeard6/jbeard-nfs",
   "issues_url": "https://github.com/jbeard6/jbeard-nfs/issues",

@@ -1,6 +1,6 @@
 {
   "name": "jbeard-nfs",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "jbeard",
   "summary": "NFS Client and Server",
   "license": "Apache-2.0",

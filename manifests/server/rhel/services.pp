@@ -8,7 +8,7 @@ class nfs::server::rhel::services (
    
     if $configonly == false {
         case $::operatingsystemmajrelease {
-            "7": {
+            '7': {
                 $nfs_service = 'nfs-server'
                 $nfs_lock_service = 'nfs-lock'
             }
@@ -16,7 +16,7 @@ class nfs::server::rhel::services (
                 $nfs_service = 'nfs'
                 $nfs_lock_service = 'nfslock'
             }
-        }  
+        }
 
         service { $nfs_service:
             ensure     => $ensure,

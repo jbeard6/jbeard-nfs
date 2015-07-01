@@ -2,7 +2,7 @@ class nfs::server::ubuntu::config (
     $ensure = installed,
 ) {
 
-    if $ensure == "absent" {
+    if $ensure == 'absent' {
 
         file { '/etc/exports':
             ensure => absent,
@@ -11,9 +11,9 @@ class nfs::server::ubuntu::config (
     } else {
 
         concat { '/etc/exports':
-            owner  => 'root',
-            group  => 'root',
-            mode   => '0644',
+            owner => 'root',
+            group => 'root',
+            mode  => '0644',
         }
 
         concat::fragment { '/etc/exports#header':

@@ -8,7 +8,7 @@ $test_exports =  {
 
     export_chroot => { path => '/tmp/export_chroot',
       options => [ 'ro', 'async', 'no_subtree_check', 'no_root_squash' ],
-      clients => [ "192.168.1.0/24" ],
+      clients => [ '192.168.1.0/24' ],
     },
 }
 

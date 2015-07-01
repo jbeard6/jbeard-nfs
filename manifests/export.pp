@@ -1,7 +1,7 @@
 define nfs::export (
+    $clients,
     $path    = $name,
     $options = [ 'rw', 'sync', 'no_subtree_check', ],
-    $clients,
 ) {
 
     concat::fragment { $name:

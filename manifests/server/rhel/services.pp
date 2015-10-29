@@ -10,7 +10,7 @@ class nfs::server::rhel::services (
         case $::operatingsystemmajrelease {
             '7': {
                 $nfs_service = 'nfs-server'
-                $nfs_lock_service = 'nfs-lock'
+                $nfs_lock_service = 'rpc-statd'
             }
             default: {
                 $nfs_service = 'nfs'

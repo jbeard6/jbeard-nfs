@@ -6,7 +6,7 @@ class nfs::client::rhel::packages (
         ensure => $ensure,
     }
 
-    if $::operatingsystemmajrelease < 7 {
+    if $::operatingsystemmajrelease + 0 < 7 {
         package { 'nfs-utils-lib':
             ensure => $ensure,
         }
